@@ -67,19 +67,20 @@
           </div>
         </div>
 
-        <!-- Min originalbild -->
+        <!-- Min profilbild -->
         <div class="hero-bild">
           <img
             src="images/profil.jpg"
             alt="Porträtt på Melda Kaya"
             width="400"
             height="520"
+            fetchpriority="high"
           >
         </div>
 
       </div>
 
-      <!-- Vågen under min presentation -->
+      <!-- Vågen under presentationen -->
       <div class="vag" aria-hidden="true">
         <svg
           viewBox="0 0 1200 65"
@@ -209,7 +210,7 @@
 
         <div class="projekt-rutnat">
 
-          <!-- Authena med min nya logga -->
+          <!-- Authena -->
           <article class="projekt authena">
 
             <img
@@ -217,6 +218,8 @@
               alt="Authenas logotyp med texten Proof of origin. Trust in every creation."
               width="1536"
               height="1024"
+              loading="lazy"
+              decoding="async"
             >
 
             <div class="projekt-info">
@@ -320,7 +323,7 @@
           <form
             class="kontakt-formular"
             action="#"
-            method="post"
+            method="get"
           >
 
             <div class="falt">

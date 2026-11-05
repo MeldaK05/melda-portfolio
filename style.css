@@ -1,5 +1,5 @@
 
-/* Mina färger */
+/* FÄRGER */
 :root {
   --svart: #171717;
   --morkgra: #39393d;
@@ -11,7 +11,7 @@
   --kant: #b8b8b8;
 }
 
-/* Grundinställningar */
+/* GRUNDINSTÄLLNINGAR */
 * {
   box-sizing: border-box;
 }
@@ -26,6 +26,7 @@ body {
   color: var(--svart);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  overflow-x: clip;
 }
 
 img {
@@ -50,8 +51,11 @@ textarea {
   outline-offset: 3px;
 }
 
-/* HEADER */
+section[id] {
+  scroll-margin-top: 20px;
+}
 
+/* HEADER */
 .sidhuvud {
   background: var(--vit);
   border-bottom: 1px solid var(--kant);
@@ -97,17 +101,17 @@ textarea {
   display: none;
 }
 
-/* HERO MED TIGERBAKGRUND */
-
+/* HERO */
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   background: var(--morkgra);
   color: var(--vit);
+  width: 100%;
 }
 
-/* Tigern ligger diskret bakom innehållet */
+/* TIGERBAKGRUND */
 .hero::before {
   content: "";
   position: absolute;
@@ -133,7 +137,7 @@ textarea {
   margin: auto;
   padding: 55px 4% 95px;
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
   gap: 45px;
   align-items: center;
 }
@@ -141,6 +145,7 @@ textarea {
 .hero-text {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .overrubrik {
@@ -175,6 +180,7 @@ textarea {
   gap: 12px;
 }
 
+/* KNAPPAR */
 .knapp {
   display: inline-block;
   padding: 11px 18px;
@@ -207,7 +213,7 @@ textarea {
   color: var(--svart);
 }
 
-/* Min profilbild med originalfärger */
+/* PROFILBILD */
 .hero-bild {
   width: 100%;
   max-width: 330px;
@@ -220,12 +226,13 @@ textarea {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--vit);
   background: #777777;
   filter: none;
 }
 
-/* Vågen under presentationen */
+/* VÅGEN */
 .vag {
   position: absolute;
   bottom: -1px;
@@ -243,7 +250,6 @@ textarea {
 }
 
 /* TEXTREMSA */
-
 .textremsa {
   background: var(--svart);
   color: var(--vit);
@@ -282,7 +288,6 @@ textarea {
 }
 
 /* HUVUDINNEHÅLL */
-
 .innehall {
   max-width: 1280px;
   margin: 0 auto;
@@ -310,15 +315,14 @@ textarea {
   margin: 0 0 10px;
 }
 
-/* OM MIG MED JAPANSK VÅG */
-
+/* OM MIG */
 .om-mig {
   grid-column: 1;
   position: relative;
   isolation: isolate;
+  min-width: 0;
 }
 
-/* Japanska vågen i bakgrunden */
 .om-mig::before {
   content: "";
   position: absolute;
@@ -345,7 +349,6 @@ textarea {
 }
 
 /* TIDSLINJE */
-
 .tidslinje {
   list-style: none;
   position: relative;
@@ -418,13 +421,13 @@ textarea {
 }
 
 /* SPELARKORT */
-
 .spelarkort {
   grid-column: 2;
   background: var(--vit);
   border: 1px dashed var(--vinrod);
   padding: 20px;
   border-radius: 2px;
+  min-width: 0;
 }
 
 .spelarkort h2 {
@@ -461,7 +464,6 @@ textarea {
 }
 
 /* PROJEKT */
-
 .projekt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 820px);
@@ -469,7 +471,7 @@ textarea {
 
 .projekt-rutnat {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
@@ -486,7 +488,6 @@ textarea {
   grid-row: 1 / 3;
 }
 
-/* Authena-loggan behåller sina blå färger */
 .authena > img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -505,7 +506,6 @@ textarea {
   grid-row: 2;
 }
 
-/* Tillfälliga bilder för kommande projekt */
 .projekt-bild {
   aspect-ratio: 16 / 7;
   background:
@@ -556,7 +556,6 @@ textarea {
 }
 
 /* KONTAKT */
-
 .kontakt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 900px);
@@ -592,7 +591,6 @@ textarea {
 }
 
 /* FORMULÄR */
-
 .kontakt-formular {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -676,7 +674,6 @@ textarea {
   border-color: var(--vinrod);
 }
 
-/* Text som förklarar att formuläret är en demo */
 .form-info {
   grid-column: 1 / -1;
   margin: 0;
@@ -685,7 +682,6 @@ textarea {
 }
 
 /* FOOTER */
-
 footer {
   background: var(--ljusgra);
   border-top: 1px solid var(--kant);
@@ -706,7 +702,6 @@ footer a {
 }
 
 /* SURFPLATTA */
-
 @media (max-width: 1023px) {
   .hero-innehall {
     min-height: 400px;
@@ -730,7 +725,6 @@ footer a {
     width: 100%;
   }
 
-  /* Tidslinjen går längs vänsterkanten */
   .tidslinje {
     padding-left: 22px;
   }
@@ -755,7 +749,6 @@ footer a {
     right: auto;
   }
 
-  /* Authena överst och två projekt under */
   .projekt-rutnat {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -779,7 +772,6 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  /* Spelarkortet flyttas längst ner */
   .om-mig {
     order: 1;
   }
@@ -798,7 +790,6 @@ footer a {
 }
 
 /* MOBIL */
-
 @media (max-width: 767px) {
   .header-innehall {
     padding: 12px 5%;
@@ -843,35 +834,56 @@ footer a {
     padding: 10px;
   }
 
+  /* Mobilanpassad hero */
+  .hero {
+    width: 100%;
+    margin: 0;
+  }
+
   .hero-innehall {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 35px 5% 85px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 40px 5% 85px;
+    min-height: 0;
   }
 
   .hero h1 {
-    font-size: clamp(60px, 16vw, 95px);
-    letter-spacing: -4px;
-    margin-bottom: 15px;
+    font-size: clamp(48px, 15vw, 85px);
+    letter-spacing: -3px;
+    margin-bottom: 18px;
   }
 
   .hero-bild {
+    width: 100%;
     max-width: 230px;
     justify-self: center;
   }
 
   .hero-bild img {
     aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 35%;
     filter: none;
   }
 
+  /* Tigern täcker hela bredden */
   .hero::before {
-    background-size: cover, 95% auto;
-    background-position: center, right top;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(35, 35, 38, 0.72) 0%,
+        rgba(35, 35, 38, 0.82) 55%,
+        rgba(35, 35, 38, 0.95) 100%
+      ),
+      url("images/tiger.jpg");
+    background-size: cover, cover;
+    background-position: center, center top;
+    background-repeat: no-repeat;
   }
 
   .hero-beskrivning {
     font-size: 13px;
+    max-width: 350px;
   }
 
   .knapp {
@@ -904,9 +916,9 @@ footer a {
     background-size: 220px auto;
   }
 
-  /* Projektkorten staplas på mobil */
+  /* Projekt på en kolumn */
   .projekt-rutnat {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .authena,
@@ -918,15 +930,16 @@ footer a {
 
   .authena > img {
     aspect-ratio: 16 / 9;
+    object-fit: contain;
   }
 
   .projekt-bild {
     aspect-ratio: 16 / 6;
   }
 
-  /* Kontaktformuläret får en kolumn */
+  /* Kontaktformulär */
   .kontakt-formular {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .meddelande,
@@ -941,10 +954,32 @@ footer a {
 
   .footer-innehall {
     padding: 15px 5%;
+    flex-wrap: wrap;
   }
 }
 
-/* Mindre rörelse för den som föredrar det */
+/* EXTRA SMÅ MOBILER */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: clamp(43px, 14vw, 55px);
+    letter-spacing: -2px;
+  }
+
+  .hero-knappar {
+    gap: 8px;
+  }
+
+  .knapp {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .hero-bild {
+    max-width: 200px;
+  }
+}
+
+/* MINSKAD RÖRELSE */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
