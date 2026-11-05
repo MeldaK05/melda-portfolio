@@ -1,17 +1,19 @@
 
-/* Färger som jag använder på sidan */
+/* =========================
+   FÄRGER OCH GRUNDINSTÄLLNINGAR
+========================= */
+
 :root {
   --svart: #171717;
   --morkgra: #39393d;
   --vinrod: #681d2b;
-  --vit: #ffffff;
+  --vit: #fff;
   --bakgrund: #faf9f6;
   --ljusgra: #eeece8;
-  --gra: #666666;
+  --gra: #666;
   --kant: #b8b8b8;
 }
 
-/* Grundinställningar */
 * {
   box-sizing: border-box;
 }
@@ -46,7 +48,6 @@ textarea {
   font: inherit;
 }
 
-/* Gör det lättare att se var man är med tangentbordet */
 :focus-visible {
   outline: 3px solid var(--vinrod);
   outline-offset: 3px;
@@ -56,7 +57,10 @@ section[id] {
   scroll-margin-top: 20px;
 }
 
-/* Menyn längst upp */
+/* =========================
+   HEADER OCH NAVIGATION
+========================= */
+
 .sidhuvud {
   background: var(--vit);
   border-bottom: 1px solid var(--kant);
@@ -102,17 +106,19 @@ section[id] {
   display: none;
 }
 
-/* Första delen av sidan */
+/* =========================
+   HERO OCH TIGERBAKGRUND
+========================= */
+
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--morkgra);
+  background: #080808;
   color: var(--vit);
   width: 100%;
 }
 
-/* Tigerbakgrunden */
 .hero::before {
   content: "";
   position: absolute;
@@ -122,16 +128,16 @@ section[id] {
   background-image:
     linear-gradient(
       90deg,
-      rgba(35, 35, 38, 0.97) 0%,
-      rgba(35, 35, 38, 0.91) 45%,
-      rgba(35, 35, 38, 0.52) 100%
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.48) 38%,
+      rgba(0, 0, 0, 0.18) 60%,
+      rgba(0, 0, 0, 0.55) 100%
     ),
-    url("images/tiger.jpg");
+    url("images/tiger.png");
 
   background-size: cover, cover;
-  background-position: center, center 15%;
+  background-position: center, center 45%;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
 }
 
 .hero-innehall {
@@ -187,7 +193,6 @@ section[id] {
   gap: 12px;
 }
 
-/* Knapparna i presentationen */
 .knapp {
   display: inline-block;
   padding: 11px 18px;
@@ -196,7 +201,9 @@ section[id] {
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .knapp-ljus {
@@ -220,7 +227,10 @@ section[id] {
   color: var(--svart);
 }
 
-/* Min profilbild */
+/* =========================
+   PROFILBILD I HERO
+========================= */
+
 .hero-bild {
   width: 100%;
   max-width: 330px;
@@ -235,11 +245,14 @@ section[id] {
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--vit);
-  background: #777777;
+  background: #777;
   filter: none;
 }
 
-/* Vågen som delar av första sektionen */
+/* =========================
+   VÅG UNDER HERO
+========================= */
+
 .vag {
   position: absolute;
   bottom: -1px;
@@ -256,7 +269,10 @@ section[id] {
   fill: var(--bakgrund);
 }
 
-/* Den rullande texten */
+/* =========================
+   RULLANDE TEXTREMSA
+========================= */
+
 .textremsa {
   background: var(--svart);
   color: var(--vit);
@@ -294,14 +310,19 @@ section[id] {
   animation-play-state: paused;
 }
 
-/* Huvudinnehåll */
+/* =========================
+   HUVUDINNEHÅLL
+========================= */
+
 .innehall {
   max-width: 1280px;
   margin: 0 auto;
   padding: 65px 4% 90px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns:
+    minmax(0, 1fr)
+    260px;
 
   column-gap: 45px;
   row-gap: 80px;
@@ -324,7 +345,10 @@ section[id] {
   margin: 0 0 10px;
 }
 
-/* Om mig */
+/* =========================
+   OM MIG
+========================= */
+
 .om-mig {
   grid-column: 1;
   position: relative;
@@ -359,7 +383,10 @@ section[id] {
   margin: 30px 0;
 }
 
-/* Min tidslinje */
+/* =========================
+   TIDSLINJE
+========================= */
+
 .tidslinje {
   list-style: none;
   position: relative;
@@ -431,7 +458,10 @@ section[id] {
   margin: 4px 0;
 }
 
-/* Spelarkortet */
+/* =========================
+   SPELARKORT
+========================= */
+
 .spelarkort {
   grid-column: 2;
   background: var(--vit);
@@ -474,7 +504,10 @@ section[id] {
   color: var(--vinrod);
 }
 
-/* Mina projekt */
+/* =========================
+   PROJEKT
+========================= */
+
 .projekt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 820px);
@@ -485,6 +518,7 @@ section[id] {
   grid-template-columns:
     minmax(0, 1.5fr)
     minmax(0, 1fr);
+
   grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
@@ -496,7 +530,6 @@ section[id] {
   min-width: 0;
 }
 
-/* Authena är mitt huvudsakliga projekt */
 .authena {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -527,13 +560,13 @@ section[id] {
     linear-gradient(
       to top right,
       transparent 49.7%,
-      #999999 50%,
+      #999 50%,
       transparent 50.3%
     ),
     linear-gradient(
       to bottom right,
       transparent 49.7%,
-      #999999 50%,
+      #999 50%,
       transparent 50.3%
     ),
     var(--ljusgra);
@@ -550,7 +583,6 @@ section[id] {
   font-weight: 700;
 }
 
-/* Texten i projektkorten */
 .projekt-info {
   padding: 12px 7px;
 }
@@ -572,7 +604,10 @@ section[id] {
   margin: 5px 0;
 }
 
-/* Kontaktsektionen */
+/* =========================
+   KONTAKT
+========================= */
+
 .kontakt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 900px);
@@ -580,7 +615,10 @@ section[id] {
 
 .kontakt-layout {
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
+  grid-template-columns:
+    230px
+    minmax(0, 1fr);
+
   gap: 30px;
   align-items: start;
 }
@@ -607,10 +645,15 @@ section[id] {
   text-underline-offset: 3px;
 }
 
-/* Kontaktformuläret */
+/* =========================
+   KONTAKTFORMULÄR
+========================= */
+
 .kontakt-formular {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 15px;
 }
 
@@ -698,7 +741,10 @@ section[id] {
   font-size: 11px;
 }
 
-/* Sidfoten */
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   background: var(--ljusgra);
   border-top: 1px solid var(--kant);
@@ -718,12 +764,24 @@ footer a {
   text-underline-offset: 3px;
 }
 
-/* Surfplattor, även iPad Pro 13 */
+/* =========================
+   SURFPLATTA
+========================= */
+
 @media (max-width: 1100px) {
 
   .hero::before {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("images/tiger.png");
+
     background-size: cover, cover;
-    background-position: center, center 15%;
+    background-position: center, center center;
+    background-repeat: no-repeat;
   }
 
   .hero-innehall {
@@ -773,7 +831,8 @@ footer a {
   }
 
   .projekt-rutnat {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .authena {
@@ -812,7 +871,10 @@ footer a {
   }
 }
 
-/* Mobil */
+/* =========================
+   MOBIL
+========================= */
+
 @media (max-width: 767px) {
 
   .header-innehall {
@@ -858,9 +920,12 @@ footer a {
     padding: 10px;
   }
 
+  /* HERO PÅ MOBIL */
+
   .hero {
     width: 100%;
     margin: 0;
+    background-color: #080808;
   }
 
   .hero-innehall {
@@ -889,17 +954,19 @@ footer a {
     filter: none;
   }
 
+  /* TIGER PÅ MOBIL */
+
   .hero::before {
     background-image:
       linear-gradient(
         180deg,
-        rgba(35, 35, 38, 0.72) 0%,
-        rgba(35, 35, 38, 0.82) 55%,
-        rgba(35, 35, 38, 0.95) 100%
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.7) 55%,
+        rgba(0, 0, 0, 0.9) 100%
       ),
-      url("images/tiger.jpg");
+      url("images/tiger.png");
 
-    background-size: cover, cover;
+    background-size: cover, 100% auto;
     background-position: center, center top;
     background-repeat: no-repeat;
   }
@@ -922,6 +989,8 @@ footer a {
     font-size: 11px;
   }
 
+  /* INNEHÅLL PÅ MOBIL */
+
   .innehall {
     padding: 45px 5% 70px;
     gap: 55px;
@@ -938,6 +1007,8 @@ footer a {
   .om-mig::before {
     background-size: 220px auto;
   }
+
+  /* PROJEKT PÅ MOBIL */
 
   .projekt-rutnat {
     grid-template-columns: minmax(0, 1fr);
@@ -959,6 +1030,8 @@ footer a {
     aspect-ratio: 16 / 6;
   }
 
+  /* KONTAKT PÅ MOBIL */
+
   .kontakt-formular {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -979,7 +1052,10 @@ footer a {
   }
 }
 
-/* Anpassningar för riktigt små mobiler */
+/* =========================
+   EXTRA SMÅ MOBILER
+========================= */
+
 @media (max-width: 360px) {
 
   .hero h1 {
@@ -1001,7 +1077,10 @@ footer a {
   }
 }
 
-/* Mindre rörelse för den som föredrar det */
+/* =========================
+   MINSKADE ANIMATIONER
+========================= */
+
 @media (prefers-reduced-motion: reduce) {
 
   html {
@@ -1017,16 +1096,5 @@ footer a {
 
   .knapp {
     transition: none;
-  }
-}
-
-/*
-  Anpassad tigerbakgrund för dator.
-  Bilden blir mindre och placeras åt höger.
-*/
-@media (min-width: 1101px) {
-  .hero::before {
-    background-size: cover, 75% auto;
-    background-position: center, right center;
   }
 }
