@@ -559,6 +559,7 @@ section[id] {
   font-weight: 700;
 }
 
+/* Texten i projektkorten */
 .projekt-info {
   padding: 12px 7px;
 }
@@ -737,6 +738,17 @@ footer a {
 
 /* Surfplattor */
 @media (max-width: 1023px) {
+
+  /*
+    Tigerbilden får fylla hela bakgrunden
+    på surfplattor så att det inte blir
+    en stor tom yta bredvid bilden.
+  */
+  .hero::before {
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+
   .hero-innehall {
     min-height: 400px;
     gap: 25px;
@@ -834,6 +846,7 @@ footer a {
 
 /* Mobil */
 @media (max-width: 767px) {
+
   .header-innehall {
     padding: 12px 5%;
   }
@@ -1000,6 +1013,7 @@ footer a {
 
 /* Anpassningar för riktigt små mobiler */
 @media (max-width: 360px) {
+
   .hero h1 {
     font-size: clamp(43px, 14vw, 55px);
     letter-spacing: -2px;
@@ -1027,6 +1041,7 @@ footer a {
   och sidan får inga mjuka animationer.
 */
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
