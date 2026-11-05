@@ -115,6 +115,8 @@ section[id] {
 /*
   Jag använder en mörk toning över tigerbilden
   så att texten syns tydligare.
+
+  Tigern täcker hela bakgrunden även på dator.
 */
 .hero::before {
   content: "";
@@ -131,8 +133,8 @@ section[id] {
     ),
     url("images/tiger.jpg");
 
-  background-size: cover, 48% auto;
-  background-position: center, right center;
+  background-size: cover, cover;
+  background-position: center, center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
 }
@@ -740,9 +742,8 @@ footer a {
 @media (max-width: 1100px) {
 
   /*
-    Tigerbilden får fylla hela bakgrunden
-    på surfplattor så att det inte blir
-    en stor tom yta bredvid bilden.
+    Tigerbilden fyller hela bakgrunden
+    även på större surfplattor.
   */
   .hero::before {
     background-size: cover, cover;
