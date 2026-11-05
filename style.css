@@ -736,8 +736,8 @@ footer a {
   läsa och använda på mobil och surfplatta.
 */
 
-/* Surfplattor */
-@media (max-width: 1023px) {
+/* Surfplattor, även iPad Pro 13 */
+@media (max-width: 1100px) {
 
   /*
     Tigerbilden får fylla hela bakgrunden
