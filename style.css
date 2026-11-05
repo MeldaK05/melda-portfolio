@@ -112,12 +112,7 @@ section[id] {
   width: 100%;
 }
 
-/*
-  Jag använder en mörk toning över tigerbilden
-  så att texten syns tydligare.
-
-  Tigern täcker hela bakgrunden även på dator.
-*/
+/* Tigerbakgrunden */
 .hero::before {
   content: "";
   position: absolute;
@@ -299,10 +294,7 @@ section[id] {
   animation-play-state: paused;
 }
 
-/*
-  Jag använder Grid för att få innehållet
-  och sidofältet bredvid varandra på datorn.
-*/
+/* Huvudinnehåll */
 .innehall {
   max-width: 1280px;
   margin: 0 auto;
@@ -504,10 +496,7 @@ section[id] {
   min-width: 0;
 }
 
-/*
-  Authena får ta större plats eftersom
-  det är mitt huvudsakliga projekt just nu.
-*/
+/* Authena är mitt huvudsakliga projekt */
 .authena {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -729,22 +718,9 @@ footer a {
   text-underline-offset: 3px;
 }
 
-/*
-  Jag har använt Grid och Flexbox för att
-  få sidan att fungera på olika skärmstorlekar.
-
-  Med media queries ändrar jag placeringen
-  på innehållet så att det blir lättare att
-  läsa och använda på mobil och surfplatta.
-*/
-
 /* Surfplattor, även iPad Pro 13 */
 @media (max-width: 1100px) {
 
-  /*
-    Tigerbilden fyller hela bakgrunden
-    även på större surfplattor.
-  */
   .hero::before {
     background-size: cover, cover;
     background-position: center, center 15%;
@@ -835,15 +811,6 @@ footer a {
     order: 4;
   }
 }
-
-/*
-  På mobilen har jag gjort layouten enklare
-  genom att lägga innehållet under varandra.
-
-  Jag har också ändrat tigerbildens placering
-  så att bakgrunden täcker hela sektionen
-  utan att lämna tomma kanter.
-*/
 
 /* Mobil */
 @media (max-width: 767px) {
@@ -1034,13 +1001,7 @@ footer a {
   }
 }
 
-/*
-  Jag har lagt till detta för personer
-  som föredrar mindre rörelse på skärmen.
-
-  Då stängs den rullande texten av
-  och sidan får inga mjuka animationer.
-*/
+/* Mindre rörelse för den som föredrar det */
 @media (prefers-reduced-motion: reduce) {
 
   html {
@@ -1056,5 +1017,16 @@ footer a {
 
   .knapp {
     transition: none;
+  }
+}
+
+/*
+  Anpassad tigerbakgrund för dator.
+  Bilden blir mindre och placeras åt höger.
+*/
+@media (min-width: 1101px) {
+  .hero::before {
+    background-size: cover, 75% auto;
+    background-position: center, right center;
   }
 }
