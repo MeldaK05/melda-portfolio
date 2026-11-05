@@ -1,5 +1,5 @@
 
-/* FÄRGER */
+/* Färger som jag använder på sidan */
 :root {
   --svart: #171717;
   --morkgra: #39393d;
@@ -11,7 +11,7 @@
   --kant: #b8b8b8;
 }
 
-/* GRUNDINSTÄLLNINGAR */
+/* Grundinställningar */
 * {
   box-sizing: border-box;
 }
@@ -46,6 +46,7 @@ textarea {
   font: inherit;
 }
 
+/* Gör det lättare att se var man är med tangentbordet */
 :focus-visible {
   outline: 3px solid var(--vinrod);
   outline-offset: 3px;
@@ -55,7 +56,7 @@ section[id] {
   scroll-margin-top: 20px;
 }
 
-/* HEADER */
+/* Menyn längst upp */
 .sidhuvud {
   background: var(--vit);
   border-bottom: 1px solid var(--kant);
@@ -101,7 +102,7 @@ section[id] {
   display: none;
 }
 
-/* HERO */
+/* Första delen av sidan */
 .hero {
   position: relative;
   isolation: isolate;
@@ -111,12 +112,16 @@ section[id] {
   width: 100%;
 }
 
-/* TIGERBAKGRUND */
+/*
+  Jag använder en mörk toning över tigerbilden
+  så att texten syns tydligare.
+*/
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
+
   background-image:
     linear-gradient(
       90deg,
@@ -125,6 +130,7 @@ section[id] {
       rgba(35, 35, 38, 0.52) 100%
     ),
     url("images/tiger.jpg");
+
   background-size: cover, 48% auto;
   background-position: center, right center;
   background-repeat: no-repeat;
@@ -136,8 +142,12 @@ section[id] {
   min-height: 430px;
   margin: auto;
   padding: 55px 4% 95px;
+
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 0.8fr);
+
   gap: 45px;
   align-items: center;
 }
@@ -180,7 +190,7 @@ section[id] {
   gap: 12px;
 }
 
-/* KNAPPAR */
+/* Knapparna i presentationen */
 .knapp {
   display: inline-block;
   padding: 11px 18px;
@@ -213,7 +223,7 @@ section[id] {
   color: var(--svart);
 }
 
-/* PROFILBILD */
+/* Min profilbild */
 .hero-bild {
   width: 100%;
   max-width: 330px;
@@ -232,7 +242,7 @@ section[id] {
   filter: none;
 }
 
-/* VÅGEN */
+/* Vågen som delar av första sektionen */
 .vag {
   position: absolute;
   bottom: -1px;
@@ -249,7 +259,7 @@ section[id] {
   fill: var(--bakgrund);
 }
 
-/* TEXTREMSA */
+/* Den rullande texten */
 .textremsa {
   background: var(--svart);
   color: var(--vit);
@@ -287,13 +297,18 @@ section[id] {
   animation-play-state: paused;
 }
 
-/* HUVUDINNEHÅLL */
+/*
+  Jag använder Grid för att få innehållet
+  och sidofältet bredvid varandra på datorn.
+*/
 .innehall {
   max-width: 1280px;
   margin: 0 auto;
   padding: 65px 4% 90px;
+
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
+
   column-gap: 45px;
   row-gap: 80px;
   align-items: start;
@@ -315,7 +330,7 @@ section[id] {
   margin: 0 0 10px;
 }
 
-/* OM MIG */
+/* Om mig */
 .om-mig {
   grid-column: 1;
   position: relative;
@@ -328,10 +343,12 @@ section[id] {
   position: absolute;
   inset: 0;
   z-index: -1;
+
   background-image: url("images/wave.jpg");
   background-size: 310px auto;
   background-repeat: no-repeat;
   background-position: right bottom;
+
   opacity: 0.09;
   filter: grayscale(100%);
   pointer-events: none;
@@ -348,7 +365,7 @@ section[id] {
   margin: 30px 0;
 }
 
-/* TIDSLINJE */
+/* Min tidslinje */
 .tidslinje {
   list-style: none;
   position: relative;
@@ -420,7 +437,7 @@ section[id] {
   margin: 4px 0;
 }
 
-/* SPELARKORT */
+/* Spelarkortet */
 .spelarkort {
   grid-column: 2;
   background: var(--vit);
@@ -463,7 +480,7 @@ section[id] {
   color: var(--vinrod);
 }
 
-/* PROJEKT */
+/* Mina projekt */
 .projekt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 820px);
@@ -471,7 +488,9 @@ section[id] {
 
 .projekt-rutnat {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
@@ -483,6 +502,10 @@ section[id] {
   min-width: 0;
 }
 
+/*
+  Authena får ta större plats eftersom
+  det är mitt huvudsakliga projekt just nu.
+*/
 .authena {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -508,6 +531,7 @@ section[id] {
 
 .projekt-bild {
   aspect-ratio: 16 / 7;
+
   background:
     linear-gradient(
       to top right,
@@ -522,6 +546,7 @@ section[id] {
       transparent 50.3%
     ),
     var(--ljusgra);
+
   border: 1px solid var(--kant);
   display: grid;
   place-items: center;
@@ -555,7 +580,7 @@ section[id] {
   margin: 5px 0;
 }
 
-/* KONTAKT */
+/* Kontaktsektionen */
 .kontakt-sektion {
   grid-column: 1 / -1;
   width: min(100%, 900px);
@@ -590,7 +615,7 @@ section[id] {
   text-underline-offset: 3px;
 }
 
-/* FORMULÄR */
+/* Kontaktformuläret */
 .kontakt-formular {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -681,7 +706,7 @@ section[id] {
   font-size: 11px;
 }
 
-/* FOOTER */
+/* Sidfoten */
 footer {
   background: var(--ljusgra);
   border-top: 1px solid var(--kant);
@@ -701,7 +726,16 @@ footer a {
   text-underline-offset: 3px;
 }
 
-/* SURFPLATTA */
+/*
+  Jag har använt Grid och Flexbox för att
+  få sidan att fungera på olika skärmstorlekar.
+
+  Med media queries ändrar jag placeringen
+  på innehållet så att det blir lättare att
+  läsa och använda på mobil och surfplatta.
+*/
+
+/* Surfplattor */
 @media (max-width: 1023px) {
   .hero-innehall {
     min-height: 400px;
@@ -789,7 +823,16 @@ footer a {
   }
 }
 
-/* MOBIL */
+/*
+  På mobilen har jag gjort layouten enklare
+  genom att lägga innehållet under varandra.
+
+  Jag har också ändrat tigerbildens placering
+  så att bakgrunden täcker hela sektionen
+  utan att lämna tomma kanter.
+*/
+
+/* Mobil */
 @media (max-width: 767px) {
   .header-innehall {
     padding: 12px 5%;
@@ -834,7 +877,6 @@ footer a {
     padding: 10px;
   }
 
-  /* Mobilanpassad hero */
   .hero {
     width: 100%;
     margin: 0;
@@ -866,7 +908,6 @@ footer a {
     filter: none;
   }
 
-  /* Tigern täcker hela bredden */
   .hero::before {
     background-image:
       linear-gradient(
@@ -876,6 +917,7 @@ footer a {
         rgba(35, 35, 38, 0.95) 100%
       ),
       url("images/tiger.jpg");
+
     background-size: cover, cover;
     background-position: center, center top;
     background-repeat: no-repeat;
@@ -916,7 +958,6 @@ footer a {
     background-size: 220px auto;
   }
 
-  /* Projekt på en kolumn */
   .projekt-rutnat {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -937,7 +978,6 @@ footer a {
     aspect-ratio: 16 / 6;
   }
 
-  /* Kontaktformulär */
   .kontakt-formular {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -958,7 +998,7 @@ footer a {
   }
 }
 
-/* EXTRA SMÅ MOBILER */
+/* Anpassningar för riktigt små mobiler */
 @media (max-width: 360px) {
   .hero h1 {
     font-size: clamp(43px, 14vw, 55px);
@@ -979,7 +1019,13 @@ footer a {
   }
 }
 
-/* MINSKAD RÖRELSE */
+/*
+  Jag har lagt till detta för personer
+  som föredrar mindre rörelse på skärmen.
+
+  Då stängs den rullande texten av
+  och sidan får inga mjuka animationer.
+*/
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
