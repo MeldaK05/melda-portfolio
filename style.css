@@ -1,8 +1,4 @@
 
-/* =========================
-   FÄRGER OCH GRUNDINSTÄLLNINGAR
-========================= */
-
 :root {
   --svart: #171717;
   --morkgra: #39393d;
@@ -57,9 +53,7 @@ section[id] {
   scroll-margin-top: 20px;
 }
 
-/* =========================
-   HEADER OCH NAVIGATION
-========================= */
+/* HEADER */
 
 .sidhuvud {
   background: var(--vit);
@@ -106,9 +100,7 @@ section[id] {
   display: none;
 }
 
-/* =========================
-   HERO OCH TIGERBAKGRUND
-========================= */
+/* HERO */
 
 .hero {
   position: relative;
@@ -128,15 +120,14 @@ section[id] {
   background-image:
     linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(0, 0, 0, 0.48) 38%,
-      rgba(0, 0, 0, 0.18) 60%,
-      rgba(0, 0, 0, 0.55) 100%
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.30) 52%,
+      rgba(0, 0, 0, 0.45) 100%
     ),
     url("images/tiger.png");
 
-  background-size: cover, cover;
-  background-position: center, center 45%;
+  background-size: cover, auto 100%;
+  background-position: center, center center;
   background-repeat: no-repeat;
 }
 
@@ -145,12 +136,8 @@ section[id] {
   min-height: 430px;
   margin: auto;
   padding: 55px 4% 95px;
-
   display: grid;
-  grid-template-columns:
-    minmax(0, 1.4fr)
-    minmax(0, 0.8fr);
-
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
   gap: 45px;
   align-items: center;
 }
@@ -201,9 +188,7 @@ section[id] {
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .knapp-ljus {
@@ -227,10 +212,6 @@ section[id] {
   color: var(--svart);
 }
 
-/* =========================
-   PROFILBILD I HERO
-========================= */
-
 .hero-bild {
   width: 100%;
   max-width: 330px;
@@ -249,10 +230,6 @@ section[id] {
   filter: none;
 }
 
-/* =========================
-   VÅG UNDER HERO
-========================= */
-
 .vag {
   position: absolute;
   bottom: -1px;
@@ -269,9 +246,7 @@ section[id] {
   fill: var(--bakgrund);
 }
 
-/* =========================
-   RULLANDE TEXTREMSA
-========================= */
+/* TEXTREMSA */
 
 .textremsa {
   background: var(--svart);
@@ -310,20 +285,14 @@ section[id] {
   animation-play-state: paused;
 }
 
-/* =========================
-   HUVUDINNEHÅLL
-========================= */
+/* HUVUDINNEHÅLL */
 
 .innehall {
   max-width: 1280px;
   margin: 0 auto;
   padding: 65px 4% 90px;
-
   display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    260px;
-
+  grid-template-columns: minmax(0, 1fr) 260px;
   column-gap: 45px;
   row-gap: 80px;
   align-items: start;
@@ -345,9 +314,7 @@ section[id] {
   margin: 0 0 10px;
 }
 
-/* =========================
-   OM MIG
-========================= */
+/* OM MIG */
 
 .om-mig {
   grid-column: 1;
@@ -361,12 +328,10 @@ section[id] {
   position: absolute;
   inset: 0;
   z-index: -1;
-
   background-image: url("images/wave.jpg");
   background-size: 310px auto;
   background-repeat: no-repeat;
   background-position: right bottom;
-
   opacity: 0.09;
   filter: grayscale(100%);
   pointer-events: none;
@@ -383,9 +348,7 @@ section[id] {
   margin: 30px 0;
 }
 
-/* =========================
-   TIDSLINJE
-========================= */
+/* TIDSLINJE */
 
 .tidslinje {
   list-style: none;
@@ -458,9 +421,7 @@ section[id] {
   margin: 4px 0;
 }
 
-/* =========================
-   SPELARKORT
-========================= */
+/* SPELARKORT */
 
 .spelarkort {
   grid-column: 2;
@@ -504,9 +465,7 @@ section[id] {
   color: var(--vinrod);
 }
 
-/* =========================
-   PROJEKT
-========================= */
+/* PROJEKT */
 
 .projekt-sektion {
   grid-column: 1 / -1;
@@ -515,10 +474,7 @@ section[id] {
 
 .projekt-rutnat {
   display: grid;
-  grid-template-columns:
-    minmax(0, 1.5fr)
-    minmax(0, 1fr);
-
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
@@ -555,7 +511,6 @@ section[id] {
 
 .projekt-bild {
   aspect-ratio: 16 / 7;
-
   background:
     linear-gradient(
       to top right,
@@ -604,9 +559,7 @@ section[id] {
   margin: 5px 0;
 }
 
-/* =========================
-   KONTAKT
-========================= */
+/* KONTAKT */
 
 .kontakt-sektion {
   grid-column: 1 / -1;
@@ -615,10 +568,7 @@ section[id] {
 
 .kontakt-layout {
   display: grid;
-  grid-template-columns:
-    230px
-    minmax(0, 1fr);
-
+  grid-template-columns: 230px minmax(0, 1fr);
   gap: 30px;
   align-items: start;
 }
@@ -645,15 +595,11 @@ section[id] {
   text-underline-offset: 3px;
 }
 
-/* =========================
-   KONTAKTFORMULÄR
-========================= */
+/* FORMULÄR */
 
 .kontakt-formular {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -741,9 +687,7 @@ section[id] {
   font-size: 11px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   background: var(--ljusgra);
@@ -764,24 +708,12 @@ footer a {
   text-underline-offset: 3px;
 }
 
-/* =========================
-   SURFPLATTA
-========================= */
+/* SURFPLATTA */
 
 @media (max-width: 1100px) {
-
   .hero::before {
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url("images/tiger.png");
-
-    background-size: cover, cover;
+    background-size: cover, auto 95%;
     background-position: center, center center;
-    background-repeat: no-repeat;
   }
 
   .hero-innehall {
@@ -831,8 +763,7 @@ footer a {
   }
 
   .projekt-rutnat {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .authena {
@@ -871,12 +802,9 @@ footer a {
   }
 }
 
-/* =========================
-   MOBIL
-========================= */
+/* MOBIL */
 
 @media (max-width: 767px) {
-
   .header-innehall {
     padding: 12px 5%;
   }
@@ -920,8 +848,6 @@ footer a {
     padding: 10px;
   }
 
-  /* HERO PÅ MOBIL */
-
   .hero {
     width: 100%;
     margin: 0;
@@ -954,20 +880,21 @@ footer a {
     filter: none;
   }
 
-  /* TIGER PÅ MOBIL */
+  /* Tigern visas i naturliga proportioner på mobil */
 
   .hero::before {
     background-image:
       linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.7) 55%,
-        rgba(0, 0, 0, 0.9) 100%
+        rgba(0, 0, 0, 0.40) 0%,
+        rgba(0, 0, 0, 0.65) 40%,
+        rgba(0, 0, 0, 0.92) 72%,
+        #080808 100%
       ),
       url("images/tiger.png");
 
-    background-size: cover, 100% auto;
-    background-position: center, center top;
+    background-size: 100% 100%, 100% auto;
+    background-position: center, center 55px;
     background-repeat: no-repeat;
   }
 
@@ -989,8 +916,6 @@ footer a {
     font-size: 11px;
   }
 
-  /* INNEHÅLL PÅ MOBIL */
-
   .innehall {
     padding: 45px 5% 70px;
     gap: 55px;
@@ -1007,8 +932,6 @@ footer a {
   .om-mig::before {
     background-size: 220px auto;
   }
-
-  /* PROJEKT PÅ MOBIL */
 
   .projekt-rutnat {
     grid-template-columns: minmax(0, 1fr);
@@ -1030,8 +953,6 @@ footer a {
     aspect-ratio: 16 / 6;
   }
 
-  /* KONTAKT PÅ MOBIL */
-
   .kontakt-formular {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1052,12 +973,9 @@ footer a {
   }
 }
 
-/* =========================
-   EXTRA SMÅ MOBILER
-========================= */
+/* EXTRA SMÅ MOBILER */
 
 @media (max-width: 360px) {
-
   .hero h1 {
     font-size: clamp(43px, 14vw, 55px);
     letter-spacing: -2px;
@@ -1077,12 +995,9 @@ footer a {
   }
 }
 
-/* =========================
-   MINSKADE ANIMATIONER
-========================= */
+/* MINSKAD RÖRELSE */
 
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
