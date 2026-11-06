@@ -1,4 +1,3 @@
-
 # Melda Kaya | Min portfolio
 
 Hej! Jag heter Melda och pluggar till blockchainutvecklare på Medieinstitutet.
@@ -9,7 +8,7 @@ Det här är min portfolio som jag har byggt med HTML och CSS. Jag ville göra e
 
 Jag började med att göra en wireframe för att få en bild av hur jag ville att hemsidan skulle se ut. Jag planerade var de olika delarna skulle ligga och hur sidan skulle fungera på mobil, surfplatta och dator.
 
-![Min wireframe](images/wireframe.png)
+![Min wireframe för dator, surfplatta och mobil](images/wireframe.png)
 
 ## Vad jag har använt
 
@@ -35,7 +34,7 @@ Mina resultat:
 
 - HTML: 0 fel och 0 varningar
 - CSS: 0 fel och 3 varningar
-- Lighthouse: 99–100 poäng i mina tester
+- Lighthouse: 93 i prestanda och 100 i tillgänglighet, Best Practices och SEO vid senaste mobiltestet
 
 ## Mina projekt
 
