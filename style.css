@@ -1,0 +1,1015 @@
+
+:root {
+  --svart: #171717;
+  --morkgra: #39393d;
+  --vinrod: #681d2b;
+  --vit: #fff;
+  --bakgrund: #faf9f6;
+  --ljusgra: #eeece8;
+  --gra: #666;
+  --kant: #b8b8b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bakgrund);
+  color: var(--svart);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--vinrod);
+  outline-offset: 3px;
+}
+
+section[id] {
+  scroll-margin-top: 20px;
+}
+
+/* HEADER */
+
+.sidhuvud {
+  background: var(--vit);
+  border-bottom: 1px solid var(--kant);
+  position: relative;
+  z-index: 10;
+}
+
+.header-innehall {
+  max-width: 1280px;
+  margin: auto;
+  padding: 13px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-decoration: none;
+}
+
+.dator-meny {
+  display: flex;
+  gap: 26px;
+}
+
+.dator-meny a,
+.mobil-meny a {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dator-meny a:hover,
+.mobil-meny a:hover {
+  color: var(--vinrod);
+  text-decoration: underline;
+}
+
+.mobil-meny {
+  display: none;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #080808;
+  color: var(--vit);
+  width: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.30) 52%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    url("images/tiger.png");
+
+  background-size: cover, auto 100%;
+  background-position: center, center center;
+  background-repeat: no-repeat;
+}
+
+.hero-innehall {
+  max-width: 1280px;
+  min-height: 430px;
+  margin: auto;
+  padding: 55px 4% 95px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  gap: 45px;
+  align-items: center;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.overrubrik {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 9vw, 135px);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -6px;
+  margin: 0 0 25px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-beskrivning {
+  max-width: 370px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.hero-knappar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.knapp {
+  display: inline-block;
+  padding: 11px 18px;
+  border: 1px solid var(--vit);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.knapp-ljus {
+  background: var(--vit);
+  color: var(--svart);
+}
+
+.knapp-kant {
+  background: transparent;
+  color: var(--vit);
+}
+
+.knapp-ljus:hover {
+  background: var(--vinrod);
+  border-color: var(--vinrod);
+  color: var(--vit);
+}
+
+.knapp-kant:hover {
+  background: var(--vit);
+  color: var(--svart);
+}
+
+.hero-bild {
+  width: 100%;
+  max-width: 330px;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bild img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--vit);
+  background: #777;
+  filter: none;
+}
+
+.vag {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  pointer-events: none;
+}
+
+.vag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: var(--bakgrund);
+}
+
+/* TEXTREMSA */
+
+.textremsa {
+  background: var(--svart);
+  color: var(--vit);
+  overflow: hidden;
+  padding: 10px 0;
+  border-top: 2px solid var(--vinrod);
+}
+
+.textremsa p {
+  width: max-content;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  animation: rulla 25s linear infinite;
+}
+
+.textremsa span {
+  color: #c17a87;
+  margin: 0 20px;
+}
+
+@keyframes rulla {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.textremsa:hover p {
+  animation-play-state: paused;
+}
+
+/* HUVUDINNEHÅLL */
+
+.innehall {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 65px 4% 90px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  column-gap: 45px;
+  row-gap: 80px;
+  align-items: start;
+}
+
+.innehall h2 {
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0 0 18px;
+}
+
+.sektion-etikett {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vinrod);
+  margin: 0 0 10px;
+}
+
+/* OM MIG */
+
+.om-mig {
+  grid-column: 1;
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+}
+
+.om-mig::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("images/wave.jpg");
+  background-size: 310px auto;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  opacity: 0.09;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.intro {
+  max-width: 650px;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+.om-mig h3 {
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+/* TIDSLINJE */
+
+.tidslinje {
+  list-style: none;
+  position: relative;
+  max-width: 650px;
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+.tidslinje::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 2px;
+  background: var(--vinrod);
+}
+
+.tidslinje li {
+  position: relative;
+  width: 50%;
+  min-height: 100px;
+  padding: 0 25px 20px;
+}
+
+.tidslinje li:nth-child(odd) {
+  text-align: right;
+}
+
+.tidslinje li:nth-child(even) {
+  margin-left: 50%;
+  text-align: left;
+}
+
+.tidslinje li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  background: var(--vinrod);
+  border: 2px solid var(--bakgrund);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tidslinje li:nth-child(odd)::before {
+  right: -7px;
+}
+
+.tidslinje li:nth-child(even)::before {
+  left: -5px;
+}
+
+.tid {
+  display: block;
+  color: var(--vinrod);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tidslinje strong {
+  display: block;
+  font-size: 14px;
+}
+
+.tidslinje p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+/* SPELARKORT */
+
+.spelarkort {
+  grid-column: 2;
+  background: var(--vit);
+  border: 1px dashed var(--vinrod);
+  padding: 20px;
+  border-radius: 2px;
+  min-width: 0;
+}
+
+.spelarkort h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.spelarkort dl {
+  margin: 0;
+}
+
+.spelarkort dt {
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 14px;
+  color: var(--vinrod);
+}
+
+.spelarkort dd {
+  font-size: 12px;
+  margin: 3px 0 0;
+}
+
+.spelarkort > a {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.spelarkort > a:hover {
+  color: var(--vinrod);
+}
+
+/* PROJEKT */
+
+.projekt-sektion {
+  grid-column: 1 / -1;
+  width: min(100%, 820px);
+}
+
+.projekt-rutnat {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px;
+}
+
+.projekt {
+  border: 1px solid var(--vinrod);
+  background: var(--vit);
+  padding: 7px;
+  min-width: 0;
+}
+
+.authena {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.authena > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #090909;
+  filter: none;
+}
+
+.projekt-tva {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.projekt-tre {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.projekt-bild {
+  aspect-ratio: 16 / 7;
+  background:
+    linear-gradient(
+      to top right,
+      transparent 49.7%,
+      #999 50%,
+      transparent 50.3%
+    ),
+    linear-gradient(
+      to bottom right,
+      transparent 49.7%,
+      #999 50%,
+      transparent 50.3%
+    ),
+    var(--ljusgra);
+
+  border: 1px solid var(--kant);
+  display: grid;
+  place-items: center;
+}
+
+.projekt-bild span {
+  background: var(--vit);
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.projekt-info {
+  padding: 12px 7px;
+}
+
+.projekt h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.projekt-typ {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--vinrod);
+}
+
+.projekt-info p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+/* KONTAKT */
+
+.kontakt-sektion {
+  grid-column: 1 / -1;
+  width: min(100%, 900px);
+}
+
+.kontakt-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.kontakt-info {
+  border: 1px solid var(--vinrod);
+  padding: 18px;
+  background: var(--vit);
+  font-style: normal;
+  overflow-wrap: anywhere;
+}
+
+.kontakt-info h3 {
+  font-size: 15px;
+  margin: 0 0 15px;
+}
+
+.kontakt-info p {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.kontakt-info a {
+  text-underline-offset: 3px;
+}
+
+/* FORMULÄR */
+
+.kontakt-formular {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.falt {
+  min-width: 0;
+}
+
+.falt label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.falt input:not([type="checkbox"]),
+.falt select,
+.falt textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--gra);
+  border-radius: 2px;
+  background: var(--vit);
+  color: var(--svart);
+  font-size: 13px;
+}
+
+.falt input:focus,
+.falt select:focus,
+.falt textarea:focus {
+  outline: 2px solid var(--vinrod);
+  outline-offset: 2px;
+}
+
+.kryssruta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kryssruta input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--vinrod);
+  flex-shrink: 0;
+}
+
+.kryssruta label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.meddelande {
+  grid-column: 1 / -1;
+}
+
+.meddelande textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.skicka-knapp {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: var(--svart);
+  color: var(--vit);
+  border: 1px solid var(--svart);
+  border-radius: 2px;
+  padding: 11px 30px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.skicka-knapp:hover {
+  background: var(--vinrod);
+  border-color: var(--vinrod);
+}
+
+.form-info {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--gra);
+  font-size: 11px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--ljusgra);
+  border-top: 1px solid var(--kant);
+}
+
+.footer-innehall {
+  max-width: 1280px;
+  margin: auto;
+  padding: 17px 4%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+}
+
+footer a {
+  text-underline-offset: 3px;
+}
+
+/* SURFPLATTA */
+
+@media (max-width: 1100px) {
+  .hero::before {
+    background-size: cover, auto 95%;
+    background-position: center, center center;
+  }
+
+  .hero-innehall {
+    min-height: 400px;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(65px, 10vw, 100px);
+  }
+
+  .innehall {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .om-mig,
+  .projekt-sektion,
+  .kontakt-sektion,
+  .spelarkort {
+    width: 100%;
+  }
+
+  .tidslinje {
+    padding-left: 22px;
+  }
+
+  .tidslinje::before {
+    left: 0;
+  }
+
+  .tidslinje li,
+  .tidslinje li:nth-child(odd),
+  .tidslinje li:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 25px 20px;
+    text-align: left;
+    min-height: 80px;
+  }
+
+  .tidslinje li:nth-child(odd)::before,
+  .tidslinje li:nth-child(even)::before {
+    left: -27px;
+    right: auto;
+  }
+
+  .projekt-rutnat {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .authena {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .authena > img {
+    aspect-ratio: 16 / 6;
+  }
+
+  .projekt-tva,
+  .projekt-tre {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .kontakt-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .om-mig {
+    order: 1;
+  }
+
+  .projekt-sektion {
+    order: 2;
+  }
+
+  .kontakt-sektion {
+    order: 3;
+  }
+
+  .spelarkort {
+    order: 4;
+  }
+}
+
+/* MOBIL */
+
+@media (max-width: 767px) {
+  .header-innehall {
+    padding: 12px 5%;
+  }
+
+  .dator-meny {
+    display: none;
+  }
+
+  .mobil-meny {
+    display: block;
+    position: relative;
+  }
+
+  .mobil-meny summary {
+    list-style: none;
+    border: 1px solid var(--svart);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .mobil-meny summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobil-meny nav {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background: var(--vit);
+    border: 1px solid var(--svart);
+    box-shadow: 0 5px 15px #00000020;
+  }
+
+  .mobil-meny nav a {
+    padding: 10px;
+  }
+
+  .hero {
+    width: 100%;
+    margin: 0;
+    background-color: #080808;
+  }
+
+  .hero-innehall {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 40px 5% 85px;
+    min-height: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 85px);
+    letter-spacing: -3px;
+    margin-bottom: 18px;
+  }
+
+  .hero-bild {
+    width: 100%;
+    max-width: 230px;
+    justify-self: center;
+  }
+
+  .hero-bild img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 35%;
+    filter: none;
+  }
+
+  /* Tigern visas i naturliga proportioner på mobil */
+
+  .hero::before {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.40) 0%,
+        rgba(0, 0, 0, 0.65) 40%,
+        rgba(0, 0, 0, 0.92) 72%,
+        #080808 100%
+      ),
+      url("images/tiger.png");
+
+    background-size: 100% 100%, 100% auto;
+    background-position: center, center 55px;
+    background-repeat: no-repeat;
+  }
+
+  .hero-beskrivning {
+    font-size: 13px;
+    max-width: 350px;
+  }
+
+  .knapp {
+    font-size: 12px;
+    padding: 10px 13px;
+  }
+
+  .vag {
+    height: 40px;
+  }
+
+  .textremsa p {
+    font-size: 11px;
+  }
+
+  .innehall {
+    padding: 45px 5% 70px;
+    gap: 55px;
+  }
+
+  .innehall h2 {
+    font-size: 29px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .om-mig::before {
+    background-size: 220px auto;
+  }
+
+  .projekt-rutnat {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .authena,
+  .projekt-tva,
+  .projekt-tre {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .authena > img {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+
+  .projekt-bild {
+    aspect-ratio: 16 / 6;
+  }
+
+  .kontakt-formular {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .meddelande,
+  .skicka-knapp,
+  .form-info {
+    grid-column: 1;
+  }
+
+  .spelarkort {
+    padding: 18px;
+  }
+
+  .footer-innehall {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+  }
+}
+
+/* EXTRA SMÅ MOBILER */
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: clamp(43px, 14vw, 55px);
+    letter-spacing: -2px;
+  }
+
+  .hero-knappar {
+    gap: 8px;
+  }
+
+  .knapp {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .hero-bild {
+    max-width: 200px;
+  }
+}
+
+/* MINSKAD RÖRELSE */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .textremsa p {
+    animation: none;
+    width: auto;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .knapp {
+    transition: none;
+  }
+}
