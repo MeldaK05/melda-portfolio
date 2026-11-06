@@ -39,7 +39,13 @@ Mina resultat:
 
 ## Mina projekt
 
-Just nu finns tre projektplatser på hemsidan. Ett av projekten är Authena, en egen idé jag arbetat med inom blockchain. De andra två är platser för framtida projekt.
+Just nu har jag tre projekt på min portfolio:
+
+- **Authena:** En egen idé inom blockchain som handlar om att verifiera digitalt innehåll.
+- **Road to Champion:** Ett koncept om min resa mot att bli mästare inom Muay Thai.
+- **Ashen Realms:** Ett framtida MMORPG-koncept inspirerat av dark fantasy.
+
+Projekten visar både mina intressen och vad jag vill utveckla framöver.
 
 ## Vad jag vill göra framöver
 
