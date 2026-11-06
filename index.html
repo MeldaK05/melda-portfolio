@@ -4,25 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Melda Kayas portfolio med projekt inom blockchain och webbutveckling."
-  >
+  <meta name="description" content="Melda Kayas portfolio med projekt inom blockchain och webbutveckling.">
   <title>Melda Kaya | Blockchainutvecklare</title>
+
+  <!-- Förladda tigerbilden som används i CSS -->
+  <link rel="preload" href="images/tiger.webp" as="image" type="image/webp" fetchpriority="high">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
 
-  <!-- Min meny -->
+  <!-- Huvudmeny med ankarlänkar till sidans sektioner -->
   <header class="sidhuvud">
     <div class="header-innehall">
-
-      <a
-        class="logo"
-        href="#hem"
-        aria-label="Melda Kaya, startsida"
-      >
+      <a class="logo" href="#hem" aria-label="Melda Kaya, till startsidan">
         M.K
       </a>
 
@@ -33,10 +29,9 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <!-- Mobilmenyn fungerar utan JavaScript -->
+      <!-- Details används för en mobilmeny utan JavaScript -->
       <details class="mobil-meny">
         <summary>Meny</summary>
-
         <nav aria-label="Mobilmeny">
           <a href="#hem">Hem</a>
           <a href="#projekt">Projekt</a>
@@ -44,25 +39,22 @@
           <a href="#kontakt">Kontakt</a>
         </nav>
       </details>
-
     </div>
   </header>
 
   <main>
 
-    <!-- Första delen av sidan -->
+    <!-- Hero med dekorativ tigerbakgrund via CSS -->
     <section class="hero" id="hem">
       <div class="hero-innehall">
 
         <div class="hero-text">
+          <p class="overrubrik">Hej, jag heter</p>
 
-          <p class="overrubrik">
-            Hej, jag heter
-          </p>
-
+          <!-- Namnet skrivs normalt i HTML och formges med CSS -->
           <h1>
-            <span>MELDA</span>
-            <span>KAYA</span>
+            <span>Melda</span>
+            <span>Kaya</span>
           </h1>
 
           <p class="hero-beskrivning">
@@ -72,7 +64,6 @@
           </p>
 
           <div class="hero-knappar">
-
             <a href="#projekt" class="knapp knapp-ljus">
               Se mina projekt
             </a>
@@ -80,24 +71,21 @@
             <a href="#kontakt" class="knapp knapp-kant">
               Kontakta mig
             </a>
-
           </div>
         </div>
 
-        <!-- Min profilbild -->
         <div class="hero-bild">
           <img
-            src="images/profil.jpg"
-            alt="Porträtt på Melda Kaya"
+            src="images/profil.webp"
+            alt="Porträtt av Melda Kaya med mörkt hår"
             width="400"
             height="520"
             fetchpriority="high"
           >
         </div>
-
       </div>
 
-      <!-- Vågen under presentationen -->
+      <!-- Dekorativ SVG behöver inte läsas upp -->
       <div class="vag" aria-hidden="true">
         <svg
           viewBox="0 0 1200 65"
@@ -109,19 +97,18 @@
           ></path>
         </svg>
       </div>
-
     </section>
 
-    <!-- Rullande text -->
-    <div class="textremsa">
+    <!-- Textremsan är dekorativ och kan pausas med CSS -->
+    <div class="textremsa" aria-hidden="true">
       <p>
-        BLOCKCHAIN <span>•</span>
-        BACKEND <span>•</span>
-        SMARTA KONTRAKT <span>•</span>
-        LEAGUE <span>•</span>
-        AION 2 <span>•</span>
-        THAIBOXNING <span>•</span>
-        BLOCKCHAIN
+        Blockchain <span>•</span>
+        Backend <span>•</span>
+        Smarta kontrakt <span>•</span>
+        League <span>•</span>
+        Aion 2 <span>•</span>
+        Thaiboxning <span>•</span>
+        Blockchain
       </p>
     </div>
 
@@ -129,11 +116,7 @@
 
       <!-- Om mig -->
       <section id="om-mig" class="om-mig">
-
-        <p class="sektion-etikett">
-          01 / OM MIG
-        </p>
-
+        <p class="sektion-etikett">01 / Om mig</p>
         <h2>Om mig</h2>
 
         <p class="intro">
@@ -141,7 +124,9 @@
           blockchainutvecklare på Medieinstitutet.
           Jag gillar programmering, problemlösning
           och att lära mig nya saker.
+        </p>
 
+        <p class="intro">
           På fritiden spelar jag League of Legends
           och Aion 2. Jag gillar också thaiboxning
           och mitt favoritdjur är tigern.
@@ -149,13 +134,11 @@
 
         <h3>Min väg</h3>
 
-        <!-- Min tidslinje -->
+        <!-- En ordnad lista används för min tidslinje -->
         <ol class="tidslinje">
-
           <li>
             <span class="tid">2026</span>
             <strong>Började utbildningen</strong>
-
             <p>
               Började studera blockchainutveckling
               på Medieinstitutet.
@@ -165,7 +148,6 @@
           <li>
             <span class="tid">2026</span>
             <strong>Första projektet</strong>
-
             <p>
               Tog fram idén till Authena.
             </p>
@@ -174,7 +156,6 @@
           <li>
             <span class="tid">Nu</span>
             <strong>Lär mig webbutveckling</strong>
-
             <p>
               Utvecklar mina kunskaper inom
               HTML, CSS och GitHub.
@@ -184,32 +165,21 @@
           <li>
             <span class="tid">Nästa</span>
             <strong>Söker LIA-plats</strong>
-
             <p>
               Vill få praktisk erfarenhet
               och fortsätta utvecklas.
             </p>
           </li>
-
         </ol>
       </section>
 
-      <!-- Mitt spelarkort -->
-      <aside
-        class="spelarkort"
-        aria-labelledby="spelarkort-rubrik"
-      >
+      <!-- Sidofält med information om mig -->
+      <aside class="spelarkort" aria-labelledby="spelarkort-rubrik">
+        <p class="sektion-etikett">Sidospår</p>
+        <h2 id="spelarkort-rubrik">Spelarkort</h2>
 
-        <p class="sektion-etikett">
-          SIDOSPÅR
-        </p>
-
-        <h2 id="spelarkort-rubrik">
-          Spelarkort
-        </h2>
-
+        <!-- DL används för egenskaper och deras värden -->
         <dl>
-
           <dt>Klass</dt>
           <dd>Blockchainutvecklare (student)</dd>
 
@@ -227,36 +197,27 @@
 
           <dt>Söker</dt>
           <dd>LIA-plats</dd>
-
         </dl>
 
-        <!-- Byt till din egen GitHub-profil -->
         <a
-          href="https://github.com/"
+          href="https://github.com/MeldaK05"
           target="_blank"
           rel="noopener noreferrer"
         >
           Min GitHub (öppnas i ny flik)
         </a>
-
       </aside>
 
-      <!-- Mina projekt -->
+      <!-- Tre projekt enligt uppgiftens krav -->
       <section id="projekt" class="projekt-sektion">
-
-        <p class="sektion-etikett">
-          02 / PROJEKT
-        </p>
-
+        <p class="sektion-etikett">02 / Projekt</p>
         <h2>Projekt</h2>
 
         <div class="projekt-rutnat">
 
-          <!-- Mitt Authena-projekt -->
           <article class="projekt authena">
-
             <img
-              src="images/authena.png"
+              src="images/authena.webp"
               alt="Authenas logotyp med texten Proof of origin. Trust in every creation."
               width="1536"
               height="1024"
@@ -265,12 +226,8 @@
             >
 
             <div class="projekt-info">
-
               <h3>Projekt 1: Authena</h3>
-
-              <p class="projekt-typ">
-                Eget blockchainprojekt
-              </p>
+              <p class="projekt-typ">Eget blockchainprojekt</p>
 
               <p>
                 Authena är min idé för att hjälpa
@@ -282,76 +239,50 @@
               <p>
                 Proof of origin. Trust in every creation.
               </p>
-
             </div>
           </article>
 
-          <!-- Projekt som kommer senare -->
           <article class="projekt projekt-tva">
-
             <div class="projekt-bild" aria-hidden="true">
-              <span>PROJEKT 02</span>
+              <span>Projekt 02</span>
             </div>
 
             <div class="projekt-info">
-
               <h3>Projekt 2</h3>
-
-              <p class="projekt-typ">
-                Kommande projekt
-              </p>
-
+              <p class="projekt-typ">Kommande projekt</p>
               <p>
                 Här kommer jag visa ett nytt projekt.
               </p>
-
             </div>
           </article>
 
           <article class="projekt projekt-tre">
-
             <div class="projekt-bild" aria-hidden="true">
-              <span>PROJEKT 03</span>
+              <span>Projekt 03</span>
             </div>
 
             <div class="projekt-info">
-
               <h3>Projekt 3</h3>
-
-              <p class="projekt-typ">
-                Kommande projekt
-              </p>
-
+              <p class="projekt-typ">Kommande projekt</p>
               <p>
                 Här kommer jag visa fler saker
                 jag skapar under utbildningen.
               </p>
-
             </div>
           </article>
-
         </div>
       </section>
 
-      <!-- Kontakt -->
+      <!-- Kontaktuppgifter och formulär -->
       <section id="kontakt" class="kontakt-sektion">
-
-        <p class="sektion-etikett">
-          03 / KONTAKT
-        </p>
-
+        <p class="sektion-etikett">03 / Kontakt</p>
         <h2>Kontakta mig</h2>
 
         <div class="kontakt-layout">
-
-          <!-- Kontaktuppgifter -->
-          <!-- Rubriken ligger utanför address för giltig HTML -->
           <div class="kontakt-info">
-
             <h3>Kontaktuppgifter</h3>
 
             <address>
-
               <p>
                 E-post:
                 <a href="mailto:meldakaya789@gmail.com">
@@ -367,134 +298,103 @@
               </p>
 
               <p>Ort: Vimmerby</p>
-
             </address>
           </div>
 
-          <!-- Kontaktformulär -->
-          <!-- Formuläret är en demo och skickar inte mejl -->
-          <form
-            class="kontakt-formular"
-            action="#"
-            method="get"
-          >
+          <!--
+            Formuläret är en demonstration.
+            Det skickar inte uppgifter till någon server.
+            Skicka-knappen är därför inaktiverad tills
+            en riktig formulärtjänst har kopplats in.
+          -->
+          <form class="kontakt-formular">
 
             <div class="falt">
-
-              <label for="namn">
-                Namn
+              <label>
+                <span>Namn</span>
+                <input
+                  type="text"
+                  name="namn"
+                  autocomplete="name"
+                  required
+                >
               </label>
-
-              <input
-                type="text"
-                id="namn"
-                name="namn"
-                autocomplete="name"
-                required
-              >
-
             </div>
 
             <div class="falt">
-
-              <label for="epost">
-                E-post
+              <label>
+                <span>E-post</span>
+                <input
+                  type="email"
+                  name="epost"
+                  autocomplete="email"
+                  required
+                >
               </label>
-
-              <input
-                type="email"
-                id="epost"
-                name="epost"
-                autocomplete="email"
-                required
-              >
-
             </div>
 
             <div class="falt">
-
-              <label for="webbplats">
-                Webbplats
+              <label>
+                <span>Webbplats</span>
+                <input
+                  type="url"
+                  name="webbplats"
+                  placeholder="https://"
+                >
               </label>
-
-              <input
-                type="url"
-                id="webbplats"
-                name="webbplats"
-                placeholder="https://"
-              >
-
             </div>
 
             <div class="falt">
-
-              <label for="telefon">
-                Telefonnummer
+              <label>
+                <span>Telefonnummer</span>
+                <input
+                  type="tel"
+                  name="telefon"
+                  autocomplete="tel"
+                  placeholder="070-000 00 00"
+                >
               </label>
-
-              <input
-                type="tel"
-                id="telefon"
-                name="telefon"
-                autocomplete="tel"
-                placeholder="070-000 00 00"
-              >
-
             </div>
 
             <div class="falt">
-
-              <label for="amne">
-                Vad gäller det?
+              <label>
+                <span>Vad gäller det?</span>
+                <select name="amne" required>
+                  <option value="">Välj ämne</option>
+                  <option value="lia">LIA-plats</option>
+                  <option value="jobb">Jobb</option>
+                  <option value="samarbete">Samarbete</option>
+                  <option value="annat">Annat</option>
+                </select>
               </label>
-
-              <select
-                id="amne"
-                name="amne"
-                required
-              >
-                <option value="">Välj ämne</option>
-                <option value="lia">LIA-plats</option>
-                <option value="jobb">Jobb</option>
-                <option value="samarbete">Samarbete</option>
-                <option value="annat">Annat</option>
-              </select>
-
             </div>
 
             <div class="falt kryssruta">
-
-              <input
-                type="checkbox"
-                id="svar"
-                name="svar"
-                value="ja"
-              >
-
-              <label for="svar">
-                Jag vill gärna ha svar via e-post.
+              <label>
+                <input
+                  type="checkbox"
+                  name="svar"
+                  value="ja"
+                >
+                <span>Jag vill gärna ha svar via e-post.</span>
               </label>
-
             </div>
 
             <div class="falt meddelande">
-
-              <label for="meddelande">
-                Meddelande
+              <label>
+                <span>Meddelande</span>
+                <textarea
+                  name="meddelande"
+                  rows="5"
+                  required
+                ></textarea>
               </label>
-
-              <textarea
-                id="meddelande"
-                name="meddelande"
-                rows="5"
-                required
-              ></textarea>
-
             </div>
 
             <button
               type="submit"
               class="skicka-knapp"
+              disabled
             >
               Skicka
             </button>
@@ -504,30 +404,18 @@
               skickar ännu inga meddelanden.
               Kontakta mig gärna via e-post istället.
             </p>
-
           </form>
-
         </div>
       </section>
-
     </div>
   </main>
 
-  <!-- Sidfoten -->
+  <!-- Sidfot -->
   <footer>
-
     <div class="footer-innehall">
-
-      <span>
-        © 2026 Melda Kaya
-      </span>
-
-      <a href="#top">
-        Till toppen ↑
-      </a>
-
+      <span>© 2026 Melda Kaya</span>
+      <a href="#top">Till toppen ↑</a>
     </div>
-
   </footer>
 
 </body>

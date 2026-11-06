@@ -1,4 +1,6 @@
 
+/* GRUNDINSTÄLLNINGAR */
+
 :root {
   --svart: #171717;
   --morkgra: #39393d;
@@ -44,6 +46,7 @@ textarea {
   font: inherit;
 }
 
+/* Tydlig fokusmarkering för tangentbordsanvändare */
 :focus-visible {
   outline: 3px solid var(--vinrod);
   outline-offset: 3px;
@@ -72,7 +75,7 @@ section[id] {
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: 900;
   letter-spacing: -2px;
   text-decoration: none;
@@ -85,7 +88,7 @@ section[id] {
 
 .dator-meny a,
 .mobil-meny a {
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -111,12 +114,18 @@ section[id] {
   width: 100%;
 }
 
+/*
+  Tigern är dekorativ och ligger därför i CSS.
+  En gradient gör den vita texten mer läsbar.
+  WebP minskar bildens filstorlek.
+  Bakgrunden behåller bildens proportioner.
+*/
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-
   background-image:
     linear-gradient(
       90deg,
@@ -124,8 +133,7 @@ section[id] {
       rgba(0, 0, 0, 0.30) 52%,
       rgba(0, 0, 0, 0.45) 100%
     ),
-    url("images/tiger.png");
-
+    url("images/tiger.webp");
   background-size: cover, auto 100%;
   background-position: center, center center;
   background-repeat: no-repeat;
@@ -137,7 +145,9 @@ section[id] {
   margin: auto;
   padding: 55px 4% 95px;
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 0.8fr);
   gap: 45px;
   align-items: center;
 }
@@ -149,7 +159,7 @@ section[id] {
 }
 
 .overrubrik {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 800;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -157,10 +167,11 @@ section[id] {
 }
 
 .hero h1 {
-  font-size: clamp(65px, 9vw, 135px);
+  font-size: clamp(4.0625rem, 9vw, 8.4375rem);
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -6px;
+  text-transform: uppercase;
   margin: 0 0 25px;
 }
 
@@ -170,7 +181,7 @@ section[id] {
 
 .hero-beskrivning {
   max-width: 370px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin-bottom: 20px;
 }
 
@@ -185,7 +196,7 @@ section[id] {
   padding: 11px 18px;
   border: 1px solid var(--vit);
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 700;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
@@ -227,7 +238,6 @@ section[id] {
   object-position: center;
   border: 1px solid var(--vit);
   background: #777;
-  filter: none;
 }
 
 .vag {
@@ -246,7 +256,7 @@ section[id] {
   fill: var(--bakgrund);
 }
 
-/* TEXTREMSA */
+/* RULLANDE TEXT */
 
 .textremsa {
   background: var(--svart);
@@ -259,9 +269,10 @@ section[id] {
 .textremsa p {
   width: max-content;
   margin: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 800;
   letter-spacing: 1px;
+  text-transform: uppercase;
   white-space: nowrap;
   animation: rulla 25s linear infinite;
 }
@@ -299,14 +310,14 @@ section[id] {
 }
 
 .innehall h2 {
-  font-size: 34px;
+  font-size: 2.125rem;
   line-height: 1.1;
   letter-spacing: -1px;
   margin: 0 0 18px;
 }
 
 .sektion-etikett {
-  font-size: 10px;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -328,7 +339,7 @@ section[id] {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url("images/wave.jpg");
+  background-image: url("images/wave.webp");
   background-size: 310px auto;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -339,12 +350,12 @@ section[id] {
 
 .intro {
   max-width: 650px;
-  font-size: 15px;
-  margin-bottom: 35px;
+  font-size: 0.9375rem;
+  margin: 0 0 18px;
 }
 
 .om-mig h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 30px 0;
 }
 
@@ -407,17 +418,17 @@ section[id] {
 .tid {
   display: block;
   color: var(--vinrod);
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
 .tidslinje strong {
   display: block;
-  font-size: 14px;
+  font-size: 0.9375rem;
 }
 
 .tidslinje p {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 4px 0;
 }
 
@@ -433,7 +444,7 @@ section[id] {
 }
 
 .spelarkort h2 {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin-bottom: 18px;
 }
 
@@ -442,21 +453,21 @@ section[id] {
 }
 
 .spelarkort dt {
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 800;
   margin-top: 14px;
   color: var(--vinrod);
 }
 
 .spelarkort dd {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 3px 0 0;
 }
 
 .spelarkort > a {
   display: inline-block;
   margin-top: 22px;
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 700;
   text-underline-offset: 3px;
 }
@@ -474,7 +485,9 @@ section[id] {
 
 .projekt-rutnat {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
@@ -496,7 +509,6 @@ section[id] {
   aspect-ratio: 4 / 3;
   object-fit: contain;
   background: #090909;
-  filter: none;
 }
 
 .projekt-tva {
@@ -525,7 +537,6 @@ section[id] {
       transparent 50.3%
     ),
     var(--ljusgra);
-
   border: 1px solid var(--kant);
   display: grid;
   place-items: center;
@@ -534,8 +545,9 @@ section[id] {
 .projekt-bild span {
   background: var(--vit);
   padding: 4px 8px;
-  font-size: 10px;
+  font-size: 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .projekt-info {
@@ -543,19 +555,19 @@ section[id] {
 }
 
 .projekt h3 {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0 0 5px;
 }
 
 .projekt-typ {
-  font-size: 11px;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--vinrod);
 }
 
 .projekt-info p {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 5px 0;
 }
 
@@ -582,12 +594,12 @@ section[id] {
 }
 
 .kontakt-info h3 {
-  font-size: 15px;
+  font-size: 1rem;
   margin: 0 0 15px;
 }
 
 .kontakt-info p {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 10px 0;
 }
 
@@ -609,7 +621,11 @@ section[id] {
 
 .falt label {
   display: block;
-  font-size: 12px;
+}
+
+.falt label span {
+  display: block;
+  font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -624,7 +640,7 @@ section[id] {
   border-radius: 2px;
   background: var(--vit);
   color: var(--svart);
-  font-size: 13px;
+  font-size: 0.875rem;
 }
 
 .falt input:focus,
@@ -634,7 +650,7 @@ section[id] {
   outline-offset: 2px;
 }
 
-.kryssruta {
+.kryssruta label {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -647,7 +663,7 @@ section[id] {
   flex-shrink: 0;
 }
 
-.kryssruta label {
+.kryssruta label span {
   margin: 0;
   font-weight: 400;
 }
@@ -671,20 +687,25 @@ section[id] {
   padding: 11px 30px;
   min-height: 44px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
-.skicka-knapp:hover {
+.skicka-knapp:hover:not(:disabled) {
   background: var(--vinrod);
   border-color: var(--vinrod);
+}
+
+.skicka-knapp:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .form-info {
   grid-column: 1 / -1;
   margin: 0;
   color: var(--gra);
-  font-size: 11px;
+  font-size: 0.8125rem;
 }
 
 /* FOOTER */
@@ -701,7 +722,7 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 footer a {
@@ -722,7 +743,7 @@ footer a {
   }
 
   .hero h1 {
-    font-size: clamp(65px, 10vw, 100px);
+    font-size: clamp(4.0625rem, 10vw, 6.25rem);
   }
 
   .innehall {
@@ -785,19 +806,24 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  /*
+    Visuell ordning anpassas för surfplatta.
+    HTML behåller sin logiska struktur.
+  */
+
   .om-mig {
     order: 1;
   }
 
-  .projekt-sektion {
+  .spelarkort {
     order: 2;
   }
 
-  .kontakt-sektion {
+  .projekt-sektion {
     order: 3;
   }
 
-  .spelarkort {
+  .kontakt-sektion {
     order: 4;
   }
 }
@@ -821,8 +847,8 @@ footer a {
   .mobil-meny summary {
     list-style: none;
     border: 1px solid var(--svart);
-    padding: 8px 14px;
-    font-size: 13px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     cursor: pointer;
   }
@@ -862,7 +888,7 @@ footer a {
   }
 
   .hero h1 {
-    font-size: clamp(48px, 15vw, 85px);
+    font-size: clamp(3rem, 15vw, 5.3125rem);
     letter-spacing: -3px;
     margin-bottom: 18px;
   }
@@ -877,10 +903,13 @@ footer a {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center 35%;
-    filter: none;
   }
 
-  /* Tigern visas i naturliga proportioner på mobil */
+  /*
+    Tigerbilden behåller naturliga proportioner
+    även på små skärmar.
+    WebP används för snabbare bildladdning.
+  */
 
   .hero::before {
     background-image:
@@ -891,20 +920,19 @@ footer a {
         rgba(0, 0, 0, 0.92) 72%,
         #080808 100%
       ),
-      url("images/tiger.png");
-
+      url("images/tiger.webp");
     background-size: 100% 100%, 100% auto;
     background-position: center, center 55px;
     background-repeat: no-repeat;
   }
 
   .hero-beskrivning {
-    font-size: 13px;
+    font-size: 0.875rem;
     max-width: 350px;
   }
 
   .knapp {
-    font-size: 12px;
+    font-size: 0.875rem;
     padding: 10px 13px;
   }
 
@@ -913,7 +941,7 @@ footer a {
   }
 
   .textremsa p {
-    font-size: 11px;
+    font-size: 0.75rem;
   }
 
   .innehall {
@@ -922,11 +950,11 @@ footer a {
   }
 
   .innehall h2 {
-    font-size: 29px;
+    font-size: 1.8125rem;
   }
 
   .intro {
-    font-size: 14px;
+    font-size: 0.9375rem;
   }
 
   .om-mig::before {
@@ -977,7 +1005,7 @@ footer a {
 
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: clamp(43px, 14vw, 55px);
+    font-size: clamp(2.6875rem, 14vw, 3.4375rem);
     letter-spacing: -2px;
   }
 
@@ -987,7 +1015,7 @@ footer a {
 
   .knapp {
     padding: 9px 10px;
-    font-size: 11px;
+    font-size: 0.8125rem;
   }
 
   .hero-bild {
@@ -996,6 +1024,11 @@ footer a {
 }
 
 /* MINSKAD RÖRELSE */
+
+/*
+  Användare som valt minskad rörelse
+  får ingen automatisk textanimation.
+*/
 
 @media (prefers-reduced-motion: reduce) {
   html {
