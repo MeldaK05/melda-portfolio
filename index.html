@@ -15,10 +15,13 @@
 
 <body id="top">
 
+  <!-- Länken hjälper tangentbordsanvändare att hoppa förbi menyn -->
+  <a class="hoppa-lank" href="#huvudinnehall">Hoppa till innehållet</a>
+
   <!-- Huvudmeny med ankarlänkar till sidans sektioner -->
   <header class="sidhuvud">
     <div class="header-innehall">
-      <a class="logo" href="#hem" aria-label="Melda Kaya, till startsidan">
+      <a class="logo" href="#hem" aria-label="M.K, Melda Kaya, till startsidan">
         M.K
       </a>
 
@@ -30,6 +33,7 @@
       </nav>
 
       <!-- Details används för en mobilmeny utan JavaScript -->
+      <!-- Menyn stängs manuellt eftersom ingen JavaScript används -->
       <details class="mobil-meny">
         <summary>Meny</summary>
         <nav aria-label="Mobilmeny">
@@ -42,7 +46,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="huvudinnehall">
 
     <!-- Hero med dekorativ tigerbakgrund via CSS -->
     <section class="hero" id="hem">

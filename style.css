@@ -52,6 +52,25 @@ textarea {
   outline-offset: 3px;
 }
 
+/* Länken visas vid tangentbordsfokus så att
+   man kan hoppa förbi menyn till innehållet. */
+.hoppa-lank {
+  position: absolute;
+  left: 10px;
+  top: -60px;
+  z-index: 100;
+  background: var(--vit);
+  color: var(--svart);
+  padding: 10px 15px;
+  border: 2px solid var(--vinrod);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hoppa-lank:focus {
+  top: 10px;
+}
+
 section[id] {
   scroll-margin-top: 20px;
 }

@@ -34,7 +34,8 @@ Mina resultat:
 
 - HTML: 0 fel och 0 varningar
 - CSS: 0 fel och 3 varningar
-- Lighthouse: 93 i prestanda och 100 i tillgänglighet, Best Practices och SEO vid senaste mobiltestet
+- Lighthouse desktop: 100 i prestanda
+- Lighthouse mobil: 93 i prestanda och 100 i tillgänglighet, Best Practices och SEO
 
 ## Mina projekt
 
