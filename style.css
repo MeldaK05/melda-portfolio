@@ -52,27 +52,24 @@ textarea {
   outline-offset: 3px;
 }
 
-/* Länken visas vid tangentbordsfokus så att
-   man kan hoppa förbi menyn till innehållet. */
+section[id] {
+  scroll-margin-top: 20px;
+}
+
+/* Hoppa-länken visas vid tangentbordsfokus för enklare navigering */
 .hoppa-lank {
   position: absolute;
   left: 10px;
   top: -60px;
   z-index: 100;
+  padding: 10px 14px;
   background: var(--vit);
   color: var(--svart);
-  padding: 10px 15px;
   border: 2px solid var(--vinrod);
-  font-weight: 700;
-  text-decoration: none;
 }
 
 .hoppa-lank:focus {
   top: 10px;
-}
-
-section[id] {
-  scroll-margin-top: 20px;
 }
 
 /* HEADER */
@@ -823,27 +820,6 @@ footer a {
 
   .kontakt-layout {
     grid-template-columns: 1fr;
-  }
-
-  /*
-    Visuell ordning anpassas för surfplatta.
-    HTML behåller sin logiska struktur.
-  */
-
-  .om-mig {
-    order: 1;
-  }
-
-  .spelarkort {
-    order: 2;
-  }
-
-  .projekt-sektion {
-    order: 3;
-  }
-
-  .kontakt-sektion {
-    order: 4;
   }
 }
 
