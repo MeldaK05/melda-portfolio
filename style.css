@@ -587,6 +587,56 @@ section[id] {
   margin: 5px 0;
 }
 
+/* Egna illustrationer med CSS istället för extra bildfiler */
+
+.muaythai-bild,
+.darkfantasy-bild {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--vinrod);
+  color: var(--vit);
+  isolation: isolate;
+}
+
+.muaythai-bild {
+  background: radial-gradient(
+    circle at 75% 30%,
+    #9d3545,
+    transparent 45%
+  ), #211016;
+}
+
+.darkfantasy-bild {
+  background: radial-gradient(
+    circle at 70% 25%,
+    #6c3545,
+    transparent 40%
+  ), #13151d;
+}
+
+.muaythai-bild::before,
+.darkfantasy-bild::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -20px;
+  top: -50px;
+  border: 2px solid #ffffff55;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.muaythai-bild span,
+.darkfantasy-bild span {
+  background: transparent;
+  color: inherit;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 10px;
+}
+
 /* KONTAKT */
 
 .kontakt-sektion {
@@ -1041,3 +1091,4 @@ footer a {
     transition: none;
   }
 }
+
